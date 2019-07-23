@@ -19,11 +19,27 @@ def load_library(emoticons)
 end
 
 def get_japanese_emoticon(file, emo)
+<<<<<<< HEAD
   emo_hash = load_library(file)
   result= emo_hash["get_emoticon"][emo] 
   
   
   result ? result : "Sorry, that emoticon was not found"
+=======
+  # emo_hash = load_library(file)
+  # result= emo_hash["get_meaning"][emo] 
+  
+  # if result == nil
+  #   result = "Sorry, that emoticon was not found" 
+  # end
+  # result
+  emoticon_hash = load_library(file)
+  result = emoticon_hash["get_meaning"][emo]
+  if result == nil
+    result = "Sorry, that emoticon was not found" 
+  end
+  result
+>>>>>>> d1ec5369d502479b17339f91de47a5fc9560e770
 end
 
 def get_english_meaning(file, emo)
